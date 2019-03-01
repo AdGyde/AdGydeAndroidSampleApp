@@ -44,13 +44,13 @@ https://www.adgyde.com/documents.php
 Sign-in to your AdGyde Console, the credentials would have already been provided by AdGyde support team. In case you have not yet received the same, please contact the AdGyde Support Team. 
 
 Please follow the given steps :- 
-Step 1 - Visit the AdGyde Website - https://www.adgyde.com
-Step 2 - Go to console
-Step 3 - Sign-in with your credentials
-Step 4 - Go to Setup -> Applications from the menu option
-Step 5 - Click on "Create an application" option on Top Right corner
-Step 6 - Fill in the Application Name and Package Name
-Step 7 - Note down the App Key for integration reference
+- Step 1) Visit the AdGyde Website - https://www.adgyde.com
+- Step 2) Go to console
+- Step 3) Sign-in with your credentials
+- Step 4) Go to Setup -> Applications from the menu option
+- Step 5) Click on "Create an application" option on Top Right corner
+- Step 6) Fill in the Application Name and Package Name
+- Step 7) Note down the App Key for integration reference
 
 
 ### <a id="downloadsdk">
