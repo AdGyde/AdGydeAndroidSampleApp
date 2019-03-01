@@ -17,25 +17,25 @@ AdGyde through its attribution SDK can determine which channel / partner the app
 To get started contact AdGyde support - support@adgyde.com
 ---
 
-Integration Process for AdGyde Android SDK `v3.3.0`
+#Integration Process for AdGyde Android SDK `v3.3.0`
 
 ## Table of content
 
 - [Get Your App Key](#getyourkey)
 - [Download Android SDK](#downloadsdk)
 - [Integrate SDK Into Project](#integratesdk)
-- [3.1 Add library files into your project](#addlibrary)
-- [3.2 Follow below steps to import .aar file into your projects](#importaar)
-- [3.3 Initializing PAgent](#initpagent)
-- [3.4 Embed Google Play Services into Your App](#embedplayservice)
-- [3.5 Add Install receiver code in the androidmanifest.xml](#addinstallreceiver)
-- [3.6 Add permissions to project](#addpermission)
-- [3.7 Add dependency to project](#adddependency)
+   - [3.1 Add library files into your project](#addlibrary)
+   - [3.2 Follow below steps to import .aar file into your projects](#importaar)
+   - [3.3 Initializing PAgent](#initpagent)
+   - [3.4 Embed Google Play Services into Your App](#embedplayservice)
+   - [3.5 Add Install receiver code in the androidmanifest.xml](#addinstallreceiver)
+   - [3.6 Add permissions to project](#addpermission)
+   - [3.7 Add dependency to project](#adddependency)
 - [Deep Linking](#deeplinking)
 - [Uninstall Tracking](#uninstalltracking)
 - [Demography](#demography)
-- [6.1 For Age Profile](#ageprofile)
-- [6.2 For Gender Profile](#genderprofile)
+   - [6.1 For Age Profile](#ageprofile)
+   - [6.2 For Gender Profile](#genderprofile)
 
 ### <a id="getyourkey">
 #  Get your App Key
@@ -55,7 +55,7 @@ Step 7 - Note down the App Key for integration reference
 #  Download Android SDK
 Please download the SDK from "Download SDK" link in top right corner of AdGyde Console.
 
-<img src="https://www.adgyde.com/img/documents/download_sdk.jpg"  width="500">
+<img src="https://www.adgyde.com/img/documents/download_sdk.jpg"  width="700">
 
 Integrate the downloaded SDK using the below steps
 
@@ -117,7 +117,8 @@ android:name= "com.adgyde.example.ExampleApplication">
 
 <!- application configuration items -->
 
-</application>```
+</application>
+```
 
 Value of android:name parameter should be full name of the newly created application class as shown in the above code snippet
 
@@ -158,7 +159,8 @@ android:value="@integer/google_play_services_version" />
 
 <service android:name="com.adgyde.android.AppJobService"android:exported="true"
 android:permission="android.permission.BIND_JOB_SERVICE">
-</service>```
+</service>
+```
 
 ### <a id="addinstallreceiver">
 #### 3.5) Add Install receiver code in the androidmanifest.xml
@@ -170,7 +172,8 @@ Please make sure that following receiver tag is kept inside application tag.
 <intent-filter>
 <action android:name="com.android.vending.INSTALL_REFERRER" />
 </intent-filter>
-</receiver>```
+</receiver>
+```
 
 If an application uses multiple INSTALL_REFERRER receivers, you should use com.adgyde.android.MultiInstallReceiver instead of com.adgyde.android.InstallReceiver.
 MultiInstallReceiver MUST be the first receiver on Top of all the other INSTALL_REFERRER receivers
@@ -179,7 +182,8 @@ MultiInstallReceiver MUST be the first receiver on Top of all the other INSTALL_
 <intent-filter>
 <action android:name="com.android.vending.INSTALL_REFERRER" />
 </intent-filter>
-</receiver>```
+</receiver>
+```
 
 If you want to use multiple receivers, then the Manifest.xml file should look like this:
 
@@ -201,7 +205,8 @@ If you want to use multiple receivers, then the Manifest.xml file should look li
 <intent-filter>
 <action android:name="com.android.vending.INSTALL_REFERRER" />
 </intent-filter>
-</receiver>```
+</receiver>
+```
 
 ### <a id="addpermission">
 #### 3.6) Add permissions to project
@@ -211,7 +216,8 @@ Add following permissions to AndroidManifest.xml
 </usespermission>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 <uses-permission android:name="android.permission.INTERNET"> 
-</uses-permission>```
+</uses-permission>
+```
 
 ### <a id="adddependency">
 #### 3.7) Add dependency to project
@@ -221,7 +227,8 @@ Add the following dependency to Android gradle file (Module : android).
 // . . .
 compile 'com.android.installreferrer:installreferrer:1.0'
 // . . .
-}```
+}
+```
 
 ### <a id="deeplinking">
 # 4. Deep Linking
@@ -252,8 +259,9 @@ PAgent.setAge(Context context, int age);
 PAgent.setAge(context, 1991, 05, 03);
 
 // Age Value
-PAgent.setAge(context, 32);```
-
+PAgent.setAge(context, 32);
+```
+<img src="https://www.adgyde.com/img/documents/age_map.jpg" width=700>
 
 
 
@@ -275,5 +283,6 @@ PAgent.setGender(context,PAgent.M);
 PAgent.setGender(context,PAgent.F);
 
 // when you pass string for Others
-PAgent.setGender(context,PAgent.O);```
-
+PAgent.setGender(context,PAgent.O);
+```
+<img src="https://www.adgyde.com/img/documents/gender_map.jpg" width=400>
