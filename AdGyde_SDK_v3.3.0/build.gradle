@@ -1,2 +1,2 @@
 configurations.maybeCreate("default")
-artifacts.add("default", file('AdGyde_SDK_v3.3.0.aar'))
+artifacts.add("default", file('AdGyde_SDK_v3.3.0.aar')) 
