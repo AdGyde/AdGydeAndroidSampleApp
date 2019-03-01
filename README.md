@@ -267,6 +267,7 @@ PAgent.setAge(context, 32);
 
 
 
+
 ### <a id="genderprofile">
 #### 6.2 For Gender Profile
 The User gender profile demography shows the advertiser the user segregation and user concentration on specific Gender segments. Having this data, assists app marketer to take more accurate measurements and helps in decision making. 
