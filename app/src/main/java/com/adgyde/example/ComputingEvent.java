@@ -1,5 +1,6 @@
 package com.adgyde.example;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,9 +8,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.adgyde.android.PAgent;
-import com.adgyde.myapplication.R;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class ComputingEvent extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,7 +46,7 @@ public class ComputingEvent extends AppCompatActivity implements View.OnClickLis
     }
 
 
-    /* 
+   /* 
 	 * Computing Event
 	 * =============
      * The below code is the example to pass a Computing event to the AdGyde SDK.
@@ -59,39 +60,38 @@ public class ComputingEvent extends AppCompatActivity implements View.OnClickLis
 	
     public void onAdvertismentClicked1() {
         HashMap<String, String> params = new HashMap<String, String>();
-        
-		// Passing a computing event is a little complex
+		
+        // Passing a computing event is a little complex
 		// First the Sub-Category needs to be specified in a Parameter + Value combination
 		// Then the Weightage of the Value needs to be specified in a Value + Weightage Combination
 		// In below Example 30%off is a Sub-Category and 1 is the Weightage of the same
         params.put("ParameterName", "30%off");
-		params.put("30%off", "1");
-        
+        params.put("30%off", "1");
+		
 		// Event is triggered with EventId and Parameters prepared above, the same are passed in this function
-        PAgent.onEvent("Sale", params);
-     
+        PAgent.onComputingEvent("Sale", params);
         Toast.makeText(this, "Computing event Ad1 clicked", Toast.LENGTH_SHORT).show();
     }
 
     public void onAdvertismentClicked2() {
         HashMap<String, String> params = new HashMap<String, String>();
-
-		// In below Example 50%off is a Sub-Category and 2 is the Weightage of the same
+		
+        // In below Example 50%off is a Sub-Category and 2 is the Weightage of the same
         params.put("Sale", "50%off");
         params.put("50%off", "2");
-		
-        PAgent.onEvent("Sale", params);
+       
+        PAgent.onComputingEvent("Sale", params);
         Toast.makeText(this, "Computing event Ad2 clicked", Toast.LENGTH_SHORT).show();
     }
 
     public void onAdvertismentClicked3() {
         HashMap<String, String> params = new HashMap<String, String>();
-        
+      
 		// In below Example 70%off is a Sub-Category and 3 is the Weightage of the same
         params.put("Sale", "70%off");
         params.put("70%off", "3");
-        
-        PAgent.onEvent("Sale", params);
-        Toast.makeText(this, "Computing event Ad3 clicked", Toast.LENGTH_SHORT).show();
+		
+        PAgent.onComputingEvent("Sale", params);
+	Toast.makeText(this, "Computing event Ad3 clicked", Toast.LENGTH_SHORT).show();
     }
 }

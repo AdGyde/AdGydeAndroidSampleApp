@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.adgyde.android.PAgent;
-import com.adgyde.myapplication.R;
 
 import java.util.HashMap;
 
@@ -61,15 +60,13 @@ public class CountingEvent extends AppCompatActivity implements View.OnClickList
 	
     public void AdgydeCounting(String value) {
         HashMap<String, String> params = new HashMap<String, String>();
-		
+
 		// Multiple values can be passed through this event and each value will be counted and displayed in panel seperately
 		// Under Counting event -> News event there will be 3 Values - "Today", "Local", "International" showing 1 count each. 
-        params.put("parameterName", "Today"); 
-		params.put("parameterName", "Local"); 
-		params.put("parameterName", "International"); 
-        
+		params.put("parameterName", value);//Event name,value
+
 		// Event is triggered with EventId and Parameters prepared above, the same are passed in this function
-		PAgent.onEvent("News", params);
+		PAgent.onCountingEvent("News", params);//eventid
 
     }
 }

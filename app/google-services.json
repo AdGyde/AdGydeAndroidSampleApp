@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "164297710766",
+    "firebase_url": "https://example-a053c.firebaseio.com",
+    "project_id": "example-a053c",
+    "storage_bucket": "example-a053c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164297710766:android:c9206e2403d5a909",
+        "android_client_info": {
+          "package_name": "com.adgyde.example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZtXGvQrrRjpX_bOa_jYU9g5_Gb7ANaII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164297710766-665nu7ag2ramtfq74ou0e4466v67vljb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

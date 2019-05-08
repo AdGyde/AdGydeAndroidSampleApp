@@ -11,7 +11,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.adgyde.android.PAgent;
-import com.adgyde.myapplication.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +54,7 @@ public class UserProfile extends AppCompatActivity {
             }
         });
 
-        /* 
+		  /* 
 		 * AdGyde demography data provides details of Age and Gender wise segregation of Users.
          * This data needs to be passed by Applictaion to show the same in the console
 		 */
@@ -66,14 +65,14 @@ public class UserProfile extends AppCompatActivity {
             public void onClick(View v) {
                 boolean ageFlag = false;
                 boolean genderFlag = false;
-
+				
 				/*
 				 * Age data can be passed to SDK by following 2 functions which are shown in below code:-
 				 *
 				 * Syntax Type 1 :- PAgent.setAge(Context context, int years, int month, int day); 
 				 * Syntax Type 2 :- PAgent.setAge(Context context, int age);
 				 *
-				 */
+				 */				
 		 
                 age = et_usr_name.getText().toString();
                 if (!age.isEmpty()) {
@@ -81,7 +80,7 @@ public class UserProfile extends AppCompatActivity {
                     PAgent.setAge(UserProfile.this, yrs, 01, 01); // Syntax Type 1 :- PAgent.setAge(Context context, int years, int month, int day);
                     ageFlag = true;
                 } else {
-                    Toast.makeText(UserProfile.this, "please enter dob year", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UserProfile.this, "Please enter Birth year", Toast.LENGTH_SHORT).show();
                 }
 
 				/* Gender value can be passed to the SDK using the below function.

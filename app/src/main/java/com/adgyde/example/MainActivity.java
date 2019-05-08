@@ -8,14 +8,12 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.adgyde.android.PAgent;
-import com.adgyde.myapplication.R;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public Button revenue, unique_Event, simple_event, counting_event, Computing_event, user_info;
+    private Button revenue, unique_Event, simple_event, counting_event, Computing_event, user_info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 revenue();
                 break;
             case R.id.unique_Event:
-                uniqueEvent();
+                Intent in1 = new Intent(this, UniqueEvent.class);
+                startActivity(in1);
                 break;
             case R.id.simple_event:
                 simpleEvent();
@@ -71,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    /* 
+ /* 
 	 * Simple Event
 	 * =============
      * The below code is the example to pass a simple event to the AdGyde SDK.
@@ -81,42 +80,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	 *
 	 */
     public void simpleEvent() {
-        PAgent.onEvent("SimpleEventID");
+        PAgent.onSimpleEvent("SimpleEventID");
         Toast.makeText(this, "Simple event clicked", Toast.LENGTH_SHORT).show();
-        PAgent.flush();
     }
 
 
-    /* 
-	 * Unique Event
-	 * =============
-     * The below code is the example to pass a Unique event to the AdGyde SDK.
-	 * This event is useful to track event which needs to be tracked once / Uniquely in a Day.
-	 * Multiple values Can be passed in the Event using multiple Parameters, but Uniqueness will be as per Event ID only
-	 * 
-	 * NOTE : Creating the Unique Event on Console with Event ID, Parameter is Compulsory
-	 *
-	 */
-    public void uniqueEvent(){
-        Map<String,String> param=new HashMap<String, String>();
-
-        // The paramter being passed in unique event are in combination of ParamterName and Value same as shown below
-		// param.put( paramName, valueName );
-        param.put("uniqueParamterName","valueName");
-
-		// Event is triggered with EventId and Parameters prepared above, the same are passed in this function
-        // The third Boolean parameter (true) specifies that the Event is a unique Event
-		// 
-		// NOTE : In case false is passed in third parameter then this event will work as counting event
-        PAgent.onEvent("uniqueEventId",param,true);
-
-        Toast.makeText(this, "Unique event clicked", Toast.LENGTH_SHORT).show();
-        PAgent.flush();
-    }
-
-	
-	
-	/* 
+  /* 
 	 * Revenue Event
 	 * =============
      * The below code is the example to pass a Revenue event to the AdGyde SDK.
@@ -128,9 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	 */
     public void revenue() {
 		// Revenue Event only requires the Revenue Value to be passed
-        PAgent.onRevenue(5); 
+        PAgent.onRevenue(5);
         Toast.makeText(this, "Revenue clicked", Toast.LENGTH_SHORT).show();
-        PAgent.flush();
-
     }
 }

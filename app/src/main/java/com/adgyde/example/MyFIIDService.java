@@ -6,9 +6,9 @@ import com.adgyde.android.PAgent;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
-public class MyFIIDService extends FirebaseInstanceIdService implements Constants {
+public class MyFIIDService extends FirebaseInstanceIdService implements Constants  {
 
-    /* 
+     /* 
 	 * AdGyde's Uninstall Tracking functionality allows you to track the number of uninstalls for your application.
      * For the uninstall functionality to work AdGyde requires the FCM token.
 	 * 
@@ -21,10 +21,9 @@ public class MyFIIDService extends FirebaseInstanceIdService implements Constant
      */
 
     @Override
-    public void onTokenRefresh() 
-	{
+    public void onTokenRefresh() {
         String token = FirebaseInstanceId.getInstance().getToken();
-        Log.d(TAG, "MyFiidservice refreshed token: " + token);
+		Log.d(TAG, "MyFiidservice refreshed token: " + token);
         PAgent.onTokenRefresh(token); // This Function passed the FCm Token to AdGyde SDK for uninstall tracking
     }
 }
