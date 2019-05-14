@@ -29,6 +29,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.installreferrer:installreferrer:1.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(':AdGyde_sdk_v4.0.2')
+    implementation project(':AdGyde_SDK_V4.0.3')
 }
 apply plugin: 'com.google.gms.google-services'

@@ -92,6 +92,6 @@ public class ComputingEvent extends AppCompatActivity implements View.OnClickLis
         params.put("70%off", "3");
 		
         PAgent.onComputingEvent("Sale", params);
-	Toast.makeText(this, "Computing event Ad3 clicked", Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "Computing event Ad3 clicked", Toast.LENGTH_SHORT).show();
     }
 }
