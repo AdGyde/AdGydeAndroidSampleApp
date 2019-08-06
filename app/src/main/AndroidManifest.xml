@@ -23,11 +23,19 @@
 
         <!--If you are not using -->
 
-        <service android:name="com.adgyde.example.MyFIIDService">
+        <service android:name=".MyFIIDService">
         <intent-filter>
-            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
         </intent-filter>/>
         </service>
+
+     <!--   <service android:name="com.adgyde.android.FIIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>-->
+
+
         <!--
          If application uses multiple INSTALL_REFERRER receivers, you should use
          com.adgyde.android.MultiInstallReceiver to replace com.adgyde.android.InstallReceiver.
