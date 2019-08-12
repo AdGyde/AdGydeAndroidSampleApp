@@ -8,9 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.adgyde.android.PAgent;
-
-import java.util.HashMap;
+import com.adgyde.android.AdGyde;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -81,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	 *
 	 */
     public void simpleEvent() {
-        PAgent.onSimpleEvent("SimpleEventID");
+        AdGyde.onSimpleEvent("SimpleEventID");
         Toast.makeText(this, "Simple event clicked", Toast.LENGTH_SHORT).show();
     }
 
@@ -98,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	 */
     public void revenue() {
 		// Revenue Event only requires the Revenue Value to be passed
-        PAgent.onRevenue(5);
+        AdGyde.onRevenue(5);
         Toast.makeText(this, "Revenue clicked", Toast.LENGTH_SHORT).show();
     }
 }

@@ -9,7 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.adgyde.android.PAgent;
+import com.adgyde.android.AdGyde;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -71,7 +72,7 @@ public class ComputingEvent extends AppCompatActivity implements View.OnClickLis
         params.put("30%off", "1");
 		
 		// Event is triggered with EventId and Parameters prepared above, the same are passed in this function
-        PAgent.onComputingEvent("Sale", params);
+        AdGyde.onComputingEvent("Sale", params);
         Toast.makeText(this, "Computing event Ad1 clicked", Toast.LENGTH_SHORT).show();
     }
 
@@ -82,7 +83,7 @@ public class ComputingEvent extends AppCompatActivity implements View.OnClickLis
         params.put("Sale", "50%off");
         params.put("50%off", "2");
        
-        PAgent.onComputingEvent("Sale", params);
+        AdGyde.onComputingEvent("Sale", params);
         Toast.makeText(this, "Computing event Ad2 clicked", Toast.LENGTH_SHORT).show();
     }
 
@@ -93,7 +94,7 @@ public class ComputingEvent extends AppCompatActivity implements View.OnClickLis
         params.put("Sale", "70%off");
         params.put("70%off", "3");
 		
-        PAgent.onComputingEvent("Sale", params);
+        AdGyde.onComputingEvent("Sale", params);
 		Toast.makeText(this, "Computing event Ad3 clicked", Toast.LENGTH_SHORT).show();
     }
 }

@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.adgyde.android.PAgent;
+import com.adgyde.android.AdGyde;
 
 import java.util.HashMap;
 
@@ -67,7 +67,7 @@ public class CountingEvent extends AppCompatActivity implements View.OnClickList
 		params.put("parameterName", value);//Event name,value
 
 		// Event is triggered with EventId and Parameters prepared above, the same are passed in this function
-		PAgent.onCountingEvent("News", params);//eventid
+		AdGyde.onCountingEvent("News", params);//eventid
 
     }
 }

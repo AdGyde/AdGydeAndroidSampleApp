@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.adgyde.android.PAgent;
+import com.adgyde.android.AdGyde;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,15 +70,15 @@ public class UserProfile extends AppCompatActivity {
 				/*
 				 * Age data can be passed to SDK by following 2 functions which are shown in below code:-
 				 *
-				 * Syntax Type 1 :- PAgent.setAge(Context context, int years, int month, int day); 
-				 * Syntax Type 2 :- PAgent.setAge(Context context, int age);
+				 * Syntax Type 1 :- AdGyde.setAge(Context context, int years, int month, int day);
+				 * Syntax Type 2 :- AdGyde.setAge(Context context, int age);
 				 *
 				 */				
 		 
                 age = et_usr_name.getText().toString();
                 if (!age.isEmpty()) {
                     int yrs = Integer.parseInt(age);
-                    PAgent.setAge(UserProfile.this, yrs, 01, 01); // Syntax Type 1 :- PAgent.setAge(Context context, int years, int month, int day);
+                    AdGyde.setAge(UserProfile.this, yrs, 01, 01); // Syntax Type 1 :- AdGyde.setAge(Context context, int years, int month, int day);
                     ageFlag = true;
                 } else {
                     Toast.makeText(UserProfile.this, "Please enter Birth year", Toast.LENGTH_SHORT).show();
@@ -90,21 +90,21 @@ public class UserProfile extends AppCompatActivity {
 				 * Female (F)
 				 * Others (O)
 				 *
-				 * Syntax :- PAgent.setGender(Context context , String gender);
+				 * Syntax :- AdGyde.setGender(Context context , String gender);
 				 * 
 				 */
 
                 if (item.equals("M")) {
                     genderFlag = true;
-                    PAgent.setGender(UserProfile.this, PAgent.M); // For Specifing Gender as Male use M Macro
+                    AdGyde.setGender(UserProfile.this, AdGyde.M); // For Specifing Gender as Male use M Macro
                 }
                 if (item.equals("F")) {
                     genderFlag = true;
-                    PAgent.setGender(UserProfile.this, PAgent.F); // For Specifing Gender as Female use F Macro
+                    AdGyde.setGender(UserProfile.this, AdGyde.F); // For Specifing Gender as Female use F Macro
                 }
                 if (item.equals("O")) {
                     genderFlag = true;
-                    PAgent.setGender(UserProfile.this, PAgent.O); // For Specifing Gender as "Do not Want to Specify" or "Other" use O Macro
+                    AdGyde.setGender(UserProfile.this, AdGyde.O); // For Specifing Gender as "Do not Want to Specify" or "Other" use O Macro
 
                 }
                 if (ageFlag && genderFlag) {

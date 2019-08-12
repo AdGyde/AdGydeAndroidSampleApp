@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.adgyde.android.PAgent;
+import com.adgyde.android.AdGyde;
 
 import java.util.HashMap;
 
@@ -72,7 +72,7 @@ public class UniqueEvent extends AppCompatActivity {
         params.put("dailyunique", "dailyunique_value");
 		
         // Event is triggered with EventId and Parameters prepared above, the same are passed in this function
-        PAgent.onDailyUnique("dailyunique_id", params);
+        AdGyde.onDailyUnique("dailyunique_id", params);
         Toast.makeText(this, "DailyUnique event clicked", Toast.LENGTH_SHORT).show();
     }
 
@@ -88,7 +88,7 @@ public class UniqueEvent extends AppCompatActivity {
         params.put("permanentunique", "permanentunique_value");
 		
 		// Event is triggered with EventId and Parameters prepared above, the same are passed in this function
-        PAgent.onPermanentUnique("permanentunique_id", params);
+        AdGyde.onPermanentUnique("permanentunique_id", params);
         Toast.makeText(this, "PermanentUnique event clicked", Toast.LENGTH_SHORT).show();
     }
 
@@ -106,7 +106,7 @@ public class UniqueEvent extends AppCompatActivity {
         // Event is triggered with EventId and Parameters prepared above, the same are passed in this function
 		// The third parameter is time in hours where you need to put the hour.
 		// Track this Custom Unique events counts in hourly basis. 
-        PAgent.onCustomUnique("customunique_id", params, 1);
+        AdGyde.onCustomUnique("customunique_id", params, 1);
         Toast.makeText(this,"CustomUnique event clicked", Toast.LENGTH_SHORT).show();
     }
 }

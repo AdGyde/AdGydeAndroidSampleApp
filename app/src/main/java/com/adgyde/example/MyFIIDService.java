@@ -2,7 +2,7 @@ package com.adgyde.example;
 
 import android.util.Log;
 
-import com.adgyde.android.PAgent;
+import com.adgyde.android.AdGyde;
 import com.google.firebase.messaging.FirebaseMessagingService;
 
 public class MyFIIDService extends FirebaseMessagingService implements Constants  {
@@ -16,12 +16,12 @@ public class MyFIIDService extends FirebaseMessagingService implements Constants
 	 * If application has multiple InstanceIDListener services, then the same can be passed using application's pre-existing Listener 
 	 * Just pass the Token to AdGyde's API through the application's pre-existing Listener
      *
-	 * Syntax :- PAgent.onTokenRefresh(token);
+	 * Syntax :- AdGyde.onTokenRefresh(token);
      */
 
 	@Override
 	public void onNewToken(String token) {
 		super.onNewToken(token);
-		PAgent.onTokenRefresh(token); // This Function passed the FCm Token to AdGyde SDK for uninstall tracking
+		AdGyde.onTokenRefresh(token); // This Function passed the FCm Token to AdGyde SDK for uninstall tracking
 	}
 }

@@ -17,7 +17,7 @@ AdGyde through its attribution SDK can determine which channel / partner the app
 To get started contact AdGyde support - support@adgyde.com
 ---
 
-# Integration Process for AdGyde Android SDK `v4.0.3`
+# Integration Process for AdGyde Android SDK `v4.1.0`
 You can also access the complete documentation from belo link as well
 https://www.adgyde.com/documents.php
 
@@ -28,7 +28,7 @@ https://www.adgyde.com/documents.php
 - [Integrate SDK Into Project](#integratesdk)
    - [3.1 Add library files into your project](#addlibrary)
    - [3.2 Follow below steps to import .aar file into your projects](#importaar)
-   - [3.3 Initializing PAgent](#initpagent)
+   - [3.3 Initializing AdGyde](#initadgyde)
    - [3.4 Embed Google Play Services into Your App](#embedplayservice)
    - [3.5 Add Install receiver code in the androidmanifest.xml](#addinstallreceiver)
    - [3.6 Add permissions to project](#addpermission)
@@ -81,15 +81,15 @@ Integrate the downloaded SDK using the below steps
  - Select "Module Dependency"
  - Select the ADGYDE_ANDROID_SDK .AAR file from the list.
 
-### <a id="initpagent">
-#### 3.3) Initializing PAgent
+### <a id="initadgyde">
+#### 3.3) Initializing AdGyde
 Android SDK needs to be initialized in the application. Please check Example project on Android SDK for complete code.
 
 ```package com.adgyde.example;
 
 import android.app.Application;
 import android.util.Log;
-import com.adgyde.android.PAgent; 
+import com.adgyde.android.AdGyde; 
 
 public class ExampleApplication extends Application implements
 Constants {
@@ -100,10 +100,10 @@ super.onCreate();
 
 Log.d(TAG, "ExampleApplication.onCreate()");
 // Default channel is Organic
-PAgent.init(this, "Your Appkey", "Organic"); 
-PAgent.flush(); 
+AdGyde.init(this, "Your Appkey", "Organic"); 
+AdGyde.flush(); 
 
-PAgent.setDebugEnabled(true); 
+AdGyde.setDebugEnabled(true); 
 }
 }
 ```
@@ -254,14 +254,14 @@ AdGyde demography data provides details of Age and Gender wise segregation of Us
 The user age profile demography shows the advertiser the user segregation and user concentration on specific age segments. Having this data assists app marketer to take more accurate measurements and helps in decision making. 
 
 Data can be passed to SDK by following 2 functions
-PAgent.setAge(Context context, int years, int month, int day);
-PAgent.setAge(Context context, int age);
+AdGyde.setAge(Context context, int years, int month, int day);
+AdGyde.setAge(Context context, int age);
 
 ```// Age to be calculated from Year, Month, Day
-PAgent.setAge(context, 1991, 05, 03);
+AdGyde.setAge(context, 1991, 05, 03);
 
 // Age Value
-PAgent.setAge(context, 32);
+AdGyde.setAge(context, 32);
 ```
 <img src="https://www.adgyde.com/img/documents/age_map.jpg" width=700>
 
@@ -272,7 +272,7 @@ PAgent.setAge(context, 32);
 #### 6.2 For Gender Profile
 The User gender profile demography shows the advertiser the user segregation and user concentration on specific Gender segments. Having this data, assists app marketer to take more accurate measurements and helps in decision making. 
 
-Syntax : PAgent.setGender(Context context , String gender); 
+Syntax : AdGyde.setGender(Context context , String gender); 
 
 Values which are permitted in Function
 1. Male (M)
@@ -280,12 +280,12 @@ Values which are permitted in Function
 3. Others (O)
 
 ```// when you pass string for Male
-PAgent.setGender(context,PAgent.M);
+AdGyde.setGender(context,AdGyde.M);
 
 // when you pass string for Female
-PAgent.setGender(context,PAgent.F);
+AdGyde.setGender(context,AdGyde.F);
 
 // when you pass string for Others
-PAgent.setGender(context,PAgent.O);
+AdGyde.setGender(context,AdGyde.O);
 ```
 <img src="https://www.adgyde.com/img/documents/gender_map.jpg" width=400>
