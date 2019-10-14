@@ -16,6 +16,10 @@ public class ExampleApplication extends Application implements Constants {
         // In case the applictaion is installed through a campaign link then the Default channel will be overriden and value from the campaign link will be passed.
         AdGyde.init(this, "Your_App_Key", "Organic");
         AdGyde.setDebugEnabled(true);
+
+        //For Collecting IMEI
+        AdGyde.allowPermissionIMEI(this,true);
+
     }
 
 }

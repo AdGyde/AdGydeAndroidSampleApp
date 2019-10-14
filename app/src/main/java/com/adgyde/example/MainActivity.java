@@ -3,6 +3,7 @@ package com.adgyde.example;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -12,7 +13,7 @@ import com.adgyde.android.AdGyde;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button revenue, unique_Event, simple_event, counting_event, Computing_event, user_info;
+    private Button revenue, unique_Event, simple_event, counting_event, Computing_event, demography, user_id, loadWebPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +35,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Computing_event = (Button) findViewById(R.id.Computing_event);
         Computing_event.setOnClickListener(this);
 
-        user_info = (Button) findViewById(R.id.demography);
-        user_info.setOnClickListener(this);
+        demography = (Button) findViewById(R.id.demography);
+        demography.setOnClickListener(this);
+
+        user_id = (Button) findViewById(R.id.user_id);
+        user_id.setOnClickListener(this);
+
+        loadWebPage = (Button) findViewById(R.id.custom_userflow);
+        loadWebPage.setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +70,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent in4 = new Intent(this, UserProfile.class);
                 startActivity(in4);
                 break;
+            case R.id.user_id:
+                setUserId();
+                break;
+            case R.id.custom_userflow:
+                Intent in5 = new Intent(this, WebViewActivity.class);
+                startActivity(in5);
         }
 
 
@@ -98,5 +111,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		// Revenue Event only requires the Revenue Value to be passed
         AdGyde.onRevenue(5);
         Toast.makeText(this, "Revenue clicked", Toast.LENGTH_SHORT).show();
+    }
+
+    /*
+     * User_ID
+     * =============
+     * The below code is the example to pass a User_Id to the AdGyde SDK.
+     *
+     */
+
+    public void setUserId(){
+        AdGyde.setClientUserId("ADG1045984");
+        Toast.makeText(this, "UserId = ADG1045984", Toast.LENGTH_SHORT).show();
     }
 }

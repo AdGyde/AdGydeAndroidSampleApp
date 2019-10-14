@@ -1,1 +1,1 @@
-include ':app', ':AdGyde_SDK_V4.1.0.o'
+include ':app', ':AdGyde_AndroidSDK_v4.1.2'

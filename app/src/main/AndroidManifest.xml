@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.adgyde.example">
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 	  <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -22,14 +24,28 @@
         <activity android:name=".CountingEvent" />
         <activity android:name=".ComputingEvent" />
         <activity android:name=".UserProfile"/>
+        <activity android:name=".WebViewActivity" />
 
-        <!--If you are not using -->
+        <!--DeepLinking-->
+        <activity android:name="com.adgyde.android.DeepLinking"
+            android:exported="true"
+            android:noHistory="true"
+            android:clearTaskOnLaunch="true"
+            android:finishOnTaskLaunch="true">
 
-        <service android:name=".MyFIIDService">
-        <intent-filter>
-            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-        </intent-filter>/>
-        </service>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="www.adgyde.com"
+                    android:pathPattern="/index"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+
 
      <!--   <service android:name="com.adgyde.android.FIIDService">
             <intent-filter>

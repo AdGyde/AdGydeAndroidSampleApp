@@ -78,7 +78,7 @@ public class UserProfile extends AppCompatActivity {
                 age = et_usr_name.getText().toString();
                 if (!age.isEmpty()) {
                     int yrs = Integer.parseInt(age);
-                    AdGyde.setAge(UserProfile.this, yrs, 01, 01); // Syntax Type 1 :- AdGyde.setAge(Context context, int years, int month, int day);
+                    AdGyde.setAge(UserProfile.this, yrs, 01, 01); // Syntax Type 1 :- PAgent.setAge(Context context, int years, int month, int day);
                     ageFlag = true;
                 } else {
                     Toast.makeText(UserProfile.this, "Please enter Birth year", Toast.LENGTH_SHORT).show();
