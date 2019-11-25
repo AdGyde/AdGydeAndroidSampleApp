@@ -132,6 +132,16 @@
                 android:textColor="#ffff" />
 
 
+            <Button
+                android:id="@+id/user_signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshape"
+                android:padding="10dp"
+                android:text="Sign in"
+                android:textColor="#ffff" />
+
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

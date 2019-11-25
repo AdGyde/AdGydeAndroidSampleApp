@@ -13,7 +13,7 @@ import com.adgyde.android.AdGyde;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button revenue, unique_Event, simple_event, counting_event, Computing_event, demography, user_id, loadWebPage;
+    private Button revenue, unique_Event, simple_event, counting_event, Computing_event, demography, user_id, loadWebPage, user_signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         loadWebPage = (Button) findViewById(R.id.custom_userflow);
         loadWebPage.setOnClickListener(this);
+
+        user_signin = (Button) findViewById(R.id.user_signin);
+        user_signin.setOnClickListener(this);
     }
 
     @Override
@@ -76,6 +79,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.custom_userflow:
                 Intent in5 = new Intent(this, WebViewActivity.class);
                 startActivity(in5);
+            case R.id.user_signin:
+                Intent in6 = new Intent(this, UserSignin.class);
+                startActivity(in6);
         }
 
 

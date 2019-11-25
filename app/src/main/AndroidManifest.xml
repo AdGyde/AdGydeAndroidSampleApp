@@ -25,6 +25,7 @@
         <activity android:name=".ComputingEvent" />
         <activity android:name=".UserProfile"/>
         <activity android:name=".WebViewActivity" />
+        <activity android:name=".UserSignin"/>
 
         <!--DeepLinking-->
         <activity android:name="com.adgyde.android.DeepLinking"
