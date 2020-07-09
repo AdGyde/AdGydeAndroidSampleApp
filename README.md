@@ -1,4 +1,4 @@
-<img src="https://www.adgyde.com/img/logo.png"  width="75">
+<img src="https://www.adgyde.com/source/images/icons/logo.png"  width="75">
 
 
 # AdGyde - Native Android Integration
