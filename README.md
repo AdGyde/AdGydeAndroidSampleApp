@@ -1,4 +1,4 @@
-<img src="https://www.adgyde.com/img/logo.png"  width="75">
+<img src="https://www.adgyde.com/source/images/icons/logo.png"  width="75">
 
 
 # AdGyde - Native Android Integration
@@ -15,6 +15,6 @@ AdGyde through its attribution SDK can determine which channel / partner the app
 To get started contact AdGyde support - support@adgyde.com
 ---
 
-# Integration Process for AdGyde Native Android SDK `v4.1.5`
+# Integration Process for AdGyde Native Android SDK `v4.1.11`
 You can also access the complete documentation from below link as well
 <a href="https://www.adgyde.com/documents.php?topic=Integration&platform=android"> Native Android Integration Documents </a> 

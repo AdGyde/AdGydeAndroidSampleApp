@@ -4,8 +4,8 @@
     android:layout_height="fill_parent"
     android:fillViewport="true">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+<RelativeLayout
+    android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
@@ -39,109 +39,119 @@
             android:textStyle="bold" />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_view"
+        android:layout_gravity="center"
+        android:layout_marginTop="59dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/simple_event"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_view"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_marginTop="5dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="Simple Event"
+            android:textColor="#ffff" />
 
 
-            <Button
-                android:id="@+id/simple_event"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/buttonshape"
-                android:padding="10dp"
-                android:text="Simple Event"
-                android:textColor="#ffff" />
+        <Button
+            android:id="@+id/counting_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="Counting Event"
+            android:textColor="#ffff" />
+
+        <Button
+            android:id="@+id/Computing_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="Computing Event"
+            android:textColor="#ffff" />
+
+        <Button
+            android:id="@+id/unique_Event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="Unique Event"
+            android:textColor="#ffff" />
+
+        <Button
+            android:id="@+id/revenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="Revenue"
+            android:textColor="#ffff" />
+
+        <Button
+            android:id="@+id/demography"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="Demography"
+            android:textColor="#ffff" />
+
+        <Button
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="UserID"
+            android:textColor="#ffff" />
+
+        <Button
+            android:id="@+id/custom_userflow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="Custom User FLow"
+            android:textColor="#ffff" />
 
 
-            <Button
-                android:id="@+id/counting_event"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/buttonshape"
-                android:padding="10dp"
-                android:text="Counting Event"
-                android:textColor="#ffff" />
-
-            <Button
-                android:id="@+id/Computing_event"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/buttonshape"
-                android:padding="10dp"
-                android:text="Computing Event"
-                android:textColor="#ffff" />
-
-            <Button
-                android:id="@+id/unique_Event"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/buttonshape"
-                android:padding="10dp"
-                android:text="Unique Event"
-                android:textColor="#ffff" />
-
-            <Button
-                android:id="@+id/revenue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/buttonshape"
-                android:padding="10dp"
-                android:text="Revenue"
-                android:textColor="#ffff" />
-
-            <Button
-                android:id="@+id/demography"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/buttonshape"
-                android:padding="10dp"
-                android:text="Demography"
-                android:textColor="#ffff" />
-
-            <Button
-                android:id="@+id/user_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/buttonshape"
-                android:padding="10dp"
-                android:text="UserID"
-                android:textColor="#ffff" />
-
-            <Button
-                android:id="@+id/custom_userflow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/buttonshape"
-                android:padding="10dp"
-                android:text="Custom User FLow"
-                android:textColor="#ffff" />
+        <Button
+            android:id="@+id/user_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="Sign in"
+            android:textColor="#ffff" />
 
 
-            <Button
-                android:id="@+id/user_signin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/buttonshape"
-                android:padding="10dp"
-                android:text="Sign in"
-                android:textColor="#ffff" />
+        <Button
+            android:id="@+id/getuser_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonshape"
+            android:padding="10dp"
+            android:text="Get User Id"
+            android:textColor="#ffff" />
 
-        </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
 </ScrollView>

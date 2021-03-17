@@ -13,7 +13,8 @@ import com.adgyde.android.AdGyde;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button revenue, unique_Event, simple_event, counting_event, Computing_event, demography, user_id, loadWebPage, user_signin;
+    private Button revenue, unique_Event, simple_event, counting_event,
+            Computing_event, demography, user_id, loadWebPage, user_signin,getuserId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         user_signin = (Button) findViewById(R.id.user_signin);
         user_signin.setOnClickListener(this);
+
+        getuserId = (Button) findViewById(R.id.getuser_id);
+        getuserId.setOnClickListener(this);
     }
 
     @Override
@@ -75,6 +79,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.user_id:
                 setUserId();
+                break;
+            case R.id.getuser_id:
+                getUserId();
                 break;
             case R.id.custom_userflow:
                 Intent in5 = new Intent(this, WebViewActivity.class);
@@ -129,5 +136,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void setUserId(){
         AdGyde.setClientUserId("ADG1045984");
         Toast.makeText(this, "UserId = ADG1045984", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void getUserId(){
+        String userid = AdGyde.getUserId();
+        Toast.makeText(this, "Get UserId = " +userid, Toast.LENGTH_SHORT).show();
+
     }
 }
