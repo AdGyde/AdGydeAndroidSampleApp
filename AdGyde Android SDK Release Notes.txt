@@ -4,11 +4,16 @@
 ============================================================================
 ============================================================================
 
+
+v4.1.12 - (25th July 2021)
+========================
+1) Minor Bug fIxes
+
+
 v4.1.11 - (12th Mar 2021)
 ========================
 1) Support for S2S events added
 2) Permisison based Location API
-
 
 v4.1.10 - (26th Jan 2021)
 ========================
@@ -42,7 +47,6 @@ v4.1.5 - (24th Feb 2020)
 2) Event count bug fixed
 3) Minor Bug fixes
 
-
 v4.1.4 - (21st Nov 2019)
 ========================
 1) Function to pass email for better user correlation
@@ -50,19 +54,16 @@ v4.1.4 - (21st Nov 2019)
 3) Support for FCM version 19+ has been added
 4) Minor bug fixes and improvements
 
-
 v4.1.2 - (22nd Aug 2019)
 ========================
 1) Function to pass user id for better user correlation
 2) Minor bug fixes and improvements
-
 
 v4.1.0 - (29th July 2019)
 ========================
 1) New Feature : Custom Post-back 
 2) Single and Multiple post-back support
 3) Minor Bug fixing and Improvement
-
 
 v4.0.2 - (11th May 2019)
 ========================
@@ -72,7 +73,6 @@ v4.0.2 - (11th May 2019)
 4) Custom User Flow - User can define user flow by using functions to track Progressive and WebView based applications
 5) Minor Bug fixing and Improvement
 
-
 v3.3.0 - (18th Oct 2018)
 ========================
 1) Fraud detection has been improved, Application wise Customized TTI added
@@ -81,13 +81,11 @@ v3.3.0 - (18th Oct 2018)
 4) New Post-back Macros introduced
 5) Minor Bug fixing and Improvement
 
-
 v3.2.10 - (17th Aug 2018)
 ========================
 1) Function to fetch Media Source from Install Referrer
 2) Support for Deep Linking and Deferred Deep Linking
 3) Minor Bug fixing and Improvement
-
 
 v3.2.9 - (22nd May 2018)
 ========================

@@ -15,6 +15,6 @@ AdGyde through its attribution SDK can determine which channel / partner the app
 To get started contact AdGyde support - support@adgyde.com
 ---
 
-# Integration Process for AdGyde Native Android SDK `v4.1.11`
+# Integration Process for AdGyde Native Android SDK `v4.1.12`
 You can also access the complete documentation from below link as well
 <a href="https://www.adgyde.com/documents.php?topic=Integration&platform=android"> Native Android Integration Documents </a> 
